@@ -1,0 +1,44 @@
+
+<div class="header">
+  <div class="left_header">
+    <div class="chat_name">hogefuga</div>
+  </div>
+  <div class="right_header">
+    <%= link_to "チャットを終了する", "#", class: "finish_chat_button" %>
+  </div>
+</div>
+
+<div class="chat_box">
+  <div class="top_chat_box">
+    <div class="post_name">Tom</div>
+    <div class="post_date">2020/3/31/(Wed) 12:43:30</div>
+  </div>
+  <div class="bottom_chat_box">
+    <div class="post_content">おはよう</div>
+  </div>
+
+  <div class="top_chat_box">
+    <div class="post_name">Tom</div>
+    <div class="post_date">2020/3/31/(Wed) 12:43:30</div>
+  </div>
+  <div class="bottom_chat_box">
+    <div class="post_content">おはよう</div>
+  </div>
+</div>
+
+<div class="message_box">
+  <%=form_with url:"#", local: true do |form| %>
+    <div class="message_form">
+        <div class="form_input">
+          <%= form.text_field :content, placeholder: "type a message" ,class:"input_message" %>
+          <%= form.label :form_image, "画像", class: "form-image"%>
+          <%= form.file_field :form_image, class:"hidden"%>
+        </div>
+        <%# <label class="form-image">
+          <span class="image-file">画像</span>
+          <input type="file" class="hidden">
+        </label> %>
+        <%= form.submit "送信", class:"submit_button"%>
+    </div>
+  <% end %>
+</div>
