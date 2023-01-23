@@ -6,6 +6,6 @@
 
 <div class="room">
   <% current_user.rooms.each do |room|%>
-    <%= link_to "#{room.name}", "#", class: "chat_room" %>
+    <%= link_to "#{room.name}", room_messages_path(room), class: "chat_room" %>
   <% end %>
 </div>
