@@ -4,7 +4,7 @@
     <div class="chat_name"><%= @room.name %></div>
   </div>
   <div class="right_header">
-    <%= link_to "チャットを終了する", "#", class: "finish_chat_button" %>
+    <%= link_to "チャットを終了する", room_path(@room) , method: :delete, class: "finish_chat_button" %>
   </div>
 </div>
 
